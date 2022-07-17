@@ -1,0 +1,432 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("DoomRideX", "DarkTheme")
+
+
+local Tab = Window:NewTab("Toggles")
+local ToggleSection = Tab:NewSection("To spam you gotta be near the machines.")
+ToggleSection:NewToggle("Soda Spam", "Spams the Soda Machine", function(state)
+	if state then
+		_G.Soda = true
+		while _G.Soda == true do
+
+			fireclickdetector(game:GetService("Workspace")["Soda Machine"].Model["Sevenup"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Soda Machine"].Model["CreamSoda"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Soda Machine"].Model["Coke"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Soda Machine"].Model["DietCoke"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Soda Machine"].Model["DrPepper"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Soda Machine"].Model["Fanta"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Soda Machine"].Model["Gatorade"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Soda Machine"].Model["IcedTea"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Soda Machine"].Model["MountainDew"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Soda Machine"].Model["Pepsi"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Soda Machine"].Model["RedBull"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Soda Machine"].Model["Sprite"].ClickDetector)
+			wait()
+		end
+	else
+		_G.Soda = false
+	end
+end)
+
+ToggleSection:NewToggle("Food Spam", "Spams the Soda Machine", function(state)
+	if state then
+		_G.Food = true
+		while _G.Food == true do
+			fireclickdetector(game:GetService("Workspace")["Snack Machine"].Model["Hotdog"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Snack Machine"].Model["Taco"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Snack Machine"].Model["Watermelon"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Snack Machine"].Model["Pizza"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Snack Machine"].Model["Cookie"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Snack Machine"].Model["Apple"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Snack Machine"].Model["Sandwich"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Snack Machine"].Model["Grapes"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Snack Machine"].Model["Waffle"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Snack Machine"].Model["Cake"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Snack Machine"].Model["Cheezburger"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Snack Machine"].Model["Gum"].ClickDetector)
+			wait()
+		end
+	else
+		_G.Food = false
+	end
+end)
+
+ToggleSection:NewToggle("Get Tools", "gets every tool", function(state)
+	if state then
+		_G.Tool = true -- true turns it on, false turns it off
+		while _G.Tool == true do
+			local LocalPlayer = game:GetService("Players").LocalPlayer;
+
+			for i,v in next, workspace:GetChildren() do
+				if v:IsA("Tool") and v:FindFirstChild("Handle")then
+					firetouchinterest(LocalPlayer.Character.HumanoidRootPart, v.Handle, 0);
+				end;
+			end;
+			wait(.1)
+		end
+
+
+	else
+		_G.Tool = false
+	end
+end)
+
+local Tab = Window:NewTab("Sound Spam")
+local SSection = Tab:NewSection("Get Tools | Required for Sound Spam")
+
+SSection:NewToggle("Yum Tools", "yum yum yum", function(state)
+	if state then
+		_G.Yum = true
+		while _G.Yum == true do
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-17.696945190429688, 13.749924659729004, -38.661834716796875)
+			fireclickdetector(game:GetService("Workspace")["Snack Machine"].Model["Sandwich"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Snack Machine"].Model["Hotdog"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace")["Snack Machine"].Model["Apple"].ClickDetector)	
+			wait(.1)
+			for i,v in pairs(game.Workspace:GetChildren()) do
+				if v:IsA"Tool" and v.Name == "Apple" and v:FindFirstChild("Handle") then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Handle.CFrame
+				end
+			end
+			wait(.1)
+			for i,v in pairs(game.Workspace:GetChildren()) do
+				if v:IsA"Tool" and v.Name == "Sandwich" and v:FindFirstChild("Handle")  then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Handle.CFrame
+				end
+			end
+			wait(.1)
+			for i,v in pairs(game.Workspace:GetChildren()) do
+				if v:IsA"Tool" and v.Name == "Hotdog" and v:FindFirstChild("Handle")  then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Handle.CFrame
+					wait(.5)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-17.696945190429688, 13.749924659729004, -38.661834716796875)
+					wait()
+				end
+			end
+		end
+
+	else
+		_G.Yum = false
+	end
+end)
+
+SSection:NewToggle("Waffle Tool", "mm wafflelicous", function(state)
+	if state then
+		_G.Waf = true
+		while _G.Waf == true do
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-17.696945190429688, 13.749924659729004, -38.661834716796875)
+			fireclickdetector(game:GetService("Workspace")["Snack Machine"].Model["Waffle"].ClickDetector)
+			wait(.1)
+			for i,v in pairs(game.Workspace:GetChildren()) do
+				if v:IsA"Tool" and v.Name == "Waffle" and v:FindFirstChild("Handle")  then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Handle.CFrame
+					wait(.5)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-17.696945190429688, 13.749924659729004, -38.661834716796875)
+					wait()
+				end
+			end
+		end
+
+	else
+		_G.Waf = false
+	end
+end)
+
+SSection:NewToggle("Grape Tool", "pop", function(state)
+	if state then
+		_G.Grape = true
+		while _G.Grape == true do
+
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-17.696945190429688, 13.749924659729004, -38.661834716796875)
+
+			fireclickdetector(game:GetService("Workspace")["Snack Machine"].Model["Grapes"].ClickDetector)
+			wait(.1)
+			for i,v in pairs(game.Workspace:GetChildren()) do
+				if v:IsA"Tool" and v.Name == "Grapes" and v:FindFirstChild("Handle") then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Handle.CFrame
+					wait(.5)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-17.696945190429688, 13.749924659729004, -38.661834716796875)
+					wait()
+				end
+			end
+		end
+
+	else
+		_G.Grape = false
+	end
+end)
+
+SSection:NewToggle("Cake Tool", "mm yummy!", function(state)
+	if state then
+		_G.Cake = true
+		while _G.Cake == true do
+
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-17.696945190429688, 13.749924659729004, -38.661834716796875)
+
+			fireclickdetector(game:GetService("Workspace")["Snack Machine"].Model["Cake"].ClickDetector)
+			wait(.1)
+			for i,v in pairs(game.Workspace:GetChildren()) do
+				if v:IsA"Tool" and v.Name == "Cake" and v:FindFirstChild("Handle") then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Handle.CFrame
+					wait(.5)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-17.696945190429688, 13.749924659729004, -38.661834716796875)
+					wait()
+				end
+			end
+		end
+
+	else
+		_G.Cake = false
+	end
+end)
+
+SSection:NewToggle("Cheezburger Tool", "cheezburger", function(state)
+	if state then
+		_G.Chez = true
+		while _G.Chez == true do
+
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-17.696945190429688, 13.749924659729004, -38.661834716796875)
+
+			fireclickdetector(game:GetService("Workspace")["Snack Machine"].Model["Cheezburger"].ClickDetector)
+			wait(.1)
+			for i,v in pairs(game.Workspace:GetChildren()) do
+				if v:IsA"Tool" and v.Name == "Cheezburger" and v:FindFirstChild("Handle") then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Handle.CFrame
+					wait(.5)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-17.696945190429688, 13.749924659729004, -38.661834716796875)
+					wait()
+				end
+			end
+		end
+
+	else
+		_G.Chez = false
+	end
+end)
+
+SSection:NewLabel("Spam Sounds")
+
+SSection:NewToggle("Sandwhich Spam | Yum", "Spams Yum Yum Yum", function(state)
+	if state then
+		_G.Sandwhich = true -- true turns it on, false turns it off
+		while _G.Sandwhich == true do
+			local LocalPlayer = game:GetService("Players").LocalPlayer
+			for _, v in pairs(LocalPlayer:GetDescendants()) do 
+				if v:IsA("Tool") and v.Name == "Sandwich" and v then
+					LocalPlayer.Character.Humanoid:EquipTool(v)
+					wait(.05)
+					local LocalPlayer = game:GetService("Players").LocalPlayer
+					LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
+				end
+			end
+			wait()
+		end
+	else
+		_G.Sandwhich = false
+	end
+end)
+
+SSection:NewToggle("Apple Spam | Yum", "Spams Yum Yum Yum", function(state)
+	if state then
+		_G.A = true -- true turns it on, false turns it off
+		while _G.A == true do
+			local LocalPlayer = game:GetService("Players").LocalPlayer
+			for _, v in pairs(LocalPlayer:GetDescendants()) do 
+				if v:IsA("Tool") and v.Name == "Apple" and v then
+					LocalPlayer.Character.Humanoid:EquipTool(v)
+					wait(.05)
+					local LocalPlayer = game:GetService("Players").LocalPlayer
+					LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
+				end
+			end
+			wait()
+		end
+	else
+		_G.A = false
+	end
+end)
+
+SSection:NewToggle("Hotdog Spam | Yum", "Spams Yum Yum Yum", function(state)
+	if state then
+		_G.H = true -- true turns it on, false turns it off
+		while _G.H == true do
+			local LocalPlayer = game:GetService("Players").LocalPlayer
+			for _, v in pairs(LocalPlayer:GetDescendants()) do 
+				if v:IsA("Tool") and v.Name == "Hotdog" and v then
+					LocalPlayer.Character.Humanoid:EquipTool(v)
+					wait(.05)
+					local LocalPlayer = game:GetService("Players").LocalPlayer
+					LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
+				end
+			end
+			wait()
+		end
+	else
+		_G.H = false
+	end
+end)
+
+SSection:NewToggle("Waffle Spam", "Spams Mmm | Wafflelicous!", function(state)
+	if state then
+		_G.W = true -- true turns it on, false turns it off
+		while _G.W == true do
+			local LocalPlayer = game:GetService("Players").LocalPlayer
+			for _, v in pairs(LocalPlayer:GetDescendants()) do 
+				if v:IsA("Tool") and v.Name == "Waffle" and v then
+					LocalPlayer.Character.Humanoid:EquipTool(v)
+					wait(.05)
+					local LocalPlayer = game:GetService("Players").LocalPlayer
+					LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
+				end
+			end
+			wait()
+		end
+	else
+		_G.W = false
+	end
+end)
+
+SSection:NewToggle("Grape Spam", "Spams Pop!", function(state)
+	if state then
+		_G.G = true -- true turns it on, false turns it off
+		while _G.G == true do
+			local LocalPlayer = game:GetService("Players").LocalPlayer
+			for _, v in pairs(LocalPlayer:GetDescendants()) do 
+				if v:IsA("Tool") and v.Name == "Grapes" and v then
+					LocalPlayer.Character.Humanoid:EquipTool(v)
+					wait(.05)
+					local LocalPlayer = game:GetService("Players").LocalPlayer
+					LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
+				end
+			end
+			wait()
+		end
+	else
+		_G.G = false
+	end
+end)
+
+SSection:NewToggle("Cake Spam", "Yummy!", function(state)
+	if state then
+		_G.Ca = true -- true turns it on, false turns it off
+		while _G.Ca == true do
+			local LocalPlayer = game:GetService("Players").LocalPlayer
+			for _, v in pairs(LocalPlayer:GetDescendants()) do 
+				if v:IsA("Tool") and v.Name == "Cake" and v then
+					LocalPlayer.Character.Humanoid:EquipTool(v)
+					wait(.05)
+					local LocalPlayer = game:GetService("Players").LocalPlayer
+					LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
+				end
+			end
+			wait()
+		end
+	else
+		_G.Ca = false
+	end
+end)
+
+
+SSection:NewToggle("Cheezburger Spam", "i love cheezburger too!", function(state)
+	if state then
+		_G.Ch = true -- true turns it on, false turns it off
+		while _G.Ch == true do
+			local LocalPlayer = game:GetService("Players").LocalPlayer
+			for _, v in pairs(LocalPlayer:GetDescendants()) do 
+				if v:IsA("Tool") and v.Name == "Cheezburger" and v then
+					LocalPlayer.Character.Humanoid:EquipTool(v)
+					wait(.05)
+					local LocalPlayer = game:GetService("Players").LocalPlayer
+					LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
+				end
+			end
+			wait()
+		end
+	else
+		_G.Ch = false
+	end
+end)
+
+
+local Tab = Window:NewTab("Misc")
+local MSection = Tab:NewSection("Misc")
+
+MSection:NewButton("Redbull", "", function()
+	game:GetService("Workspace")["Soda Machine"].Model.RedBull.ClickDetector.MaxActivationDistance = math.huge
+	fireclickdetector(game:GetService("Workspace")["Soda Machine"].Model["RedBull"].ClickDetector)
+	wait(.1)
+	local LocalPlayer = game:GetService("Players").LocalPlayer;
+	for i,v in next, workspace:GetChildren() do
+		if v:IsA("Tool") and v.Name == "RedBull" and v:FindFirstChild("Handle")then
+			firetouchinterest(LocalPlayer.Character.HumanoidRootPart, v.Handle, 0);
+		end;
+	end;
+	wait(1)
+	local LocalPlayer = game:GetService("Players").LocalPlayer
+	for _, v in pairs(LocalPlayer:GetDescendants()) do 
+		if v:IsA("Tool") and v.Name == "RedBull" and v then
+			LocalPlayer.Character.Humanoid:EquipTool(v)
+			wait()
+			local LocalPlayer = game:GetService("Players").LocalPlayer
+			LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
+			wait(3)
+			game:GetService("Workspace").Camera.FieldOfView = 120
+			wait(15)
+			game:GetService("Workspace").Camera.FieldOfView = 70
+			wait(1)
+			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+			wait(1)
+			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+		end
+	end
+
+end)
+
+
+MSection:NewButton("Get All Paths", "", function()
+	local playerHead = game.Players.LocalPlayer.Character.Head
+	for i, v in pairs(game:GetService("Workspace")["Path giver (Dissapears)"]["Purple Path Giver"].path:GetDescendants()) do
+		if v.Name == "TouchInterest" and v.Parent then
+			firetouchinterest(playerHead, v.Parent, 0)
+		end
+	end
+
+	local playerHead = game.Players.LocalPlayer.Character.Head
+	for i, v in pairs(game:GetService("Workspace")["Path giver (Dissapears)"]["Red Path Giver"].path:GetDescendants()) do
+		if v.Name == "TouchInterest" and v.Parent then
+			firetouchinterest(playerHead, v.Parent, 0)
+		end
+	end
+
+	local playerHead = game.Players.LocalPlayer.Character.Head
+	for i, v in pairs(game:GetService("Workspace")["Path giver (Dissapears)"]["Yellow Path Giver"].path:GetDescendants()) do
+		if v.Name == "TouchInterest" and v.Parent then
+			firetouchinterest(playerHead, v.Parent, 0)
+		end
+	end
+
+	local playerHead = game.Players.LocalPlayer.Character.Head
+	for i, v in pairs(game:GetService("Workspace")["Path giver (Dissapears)"]["Black Path Giver"].path:GetDescendants()) do
+		if v.Name == "TouchInterest" and v.Parent then
+			firetouchinterest(playerHead, v.Parent, 0)
+		end
+	end
+
+	local playerHead = game.Players.LocalPlayer.Character.Head
+	for i, v in pairs(game:GetService("Workspace")["Path giver (Dissapears)"]["Blue Path Giver"].path:GetDescendants()) do
+		if v.Name == "TouchInterest" and v.Parent then
+			firetouchinterest(playerHead, v.Parent, 0)
+		end
+	end
+
+	local playerHead = game.Players.LocalPlayer.Character.Head
+	for i, v in pairs(game:GetService("Workspace")["Path giver (Dissapears)"]["Green Path Giver"].path:GetDescendants()) do
+		if v.Name == "TouchInterest" and v.Parent then
+			firetouchinterest(playerHead, v.Parent, 0)
+		end
+	end
+end)
+
+MSection:NewButton("Fly/Carfly [V]", "", function()
+	loadstring(game:HttpGet('https://pastebin.com/raw/BbpyJPN6'))()
+end)
